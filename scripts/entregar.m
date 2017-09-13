@@ -1,8 +1,13 @@
 close all # fechar todas as janelas
 clear # limpar a memória
 clc # limpa a tela da área de trabalho
-A=imread('../imagens/moon.tif'); % Ler o arquivo
-#cte_brilho=50;
+pkg load image; #carrega pacote de imagem 
+
+[arroz,mapa_arroz]=imread('../imagens/rice.tif');
+subplot(1,2,1),   imshow(arroz), title("arrozes");
+subplot(1,2,2),   (imhist(arroz)), title("arrozes");
+
+function autoescala
 f_max=max(max(A)); # novidade !!!
 f_min=min(min(A)); # novidade !!!
 figure, subplot(imshow(A), imhist(A));
@@ -23,7 +28,10 @@ for i=1:lin
         end
     end
 end
-figure, imhist(B);
-title("Histograma da imagem autoescalada");
-figure, imshow(B);
-title("Imagem autoescalada");
+endfunction
+
+
+#Autoescala;
+#ii. Quantização;
+#iii. Spliting;
+#iv. Equalização do histograma.

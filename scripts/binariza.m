@@ -19,7 +19,15 @@ for i=1:lin
     end
   end
 end
-figure, imhist(B);
-title("histograma apos binarizar");
-figure, imshow(B);
-title("Imagem apos binarizar");
+T = subplot(2,1,1);
+plot( imhist(B));
+T2 = subplot(2,1,2);
+plot( (B));
+title("Imagem Binaria");
+
+
+#figure, imshow(T);
+#figure, imhist(B);
+#title("histograma apos binarizar");
+#figure, imshow(B);
+#title("Imagem apos binarizar");
