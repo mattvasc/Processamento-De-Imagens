@@ -1,10 +1,13 @@
 close all # fechar todas as janelas
 clear # limpar a memória
 clc # limpa a tela da área de trabalho
-A=imread('../cacau_escuro.tif'); % Ler o arquivo
-limiar=150;
+pkg load image;
+A=imread('../imagens/cacau_escuro.tif'); % Ler o arquivo
+limiar=48;
 figure, imshow(A); % mostrar a imagem
+title("figura original")
 figure, imhist(A);
+title("histograma original")
 [lin col]=size(A); % obtém dimensões da imagem
 B=A;
 for i=1:lin
@@ -17,4 +20,6 @@ for i=1:lin
   end
 end
 figure, imhist(B);
+title("histograma apos binarizar");
 figure, imshow(B);
+title("Imagem apos binarizar");
