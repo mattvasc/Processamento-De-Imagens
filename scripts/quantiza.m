@@ -1,7 +1,7 @@
 close all % fechar todas as janelas
 clear % limpar a memória
 clc % limpa a tela da área de trabalho
-A=imread('../cacau_escuro.tif'); % Ler o arquivo
+A=imread('../imagens/cacau_escuro.tif'); % Ler o arquivo
 maior_cinza=max(max(A));
 qtd_niveis=2;
 passo=round(maior_cinza/qtd_niveis);

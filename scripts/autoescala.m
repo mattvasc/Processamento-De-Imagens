@@ -1,14 +1,19 @@
+################################################
+#redistribui os niveis de cinza de uma imagem, #
+#bom para imagens com histograma concentrado.  #
+################################################
+
 close all # fechar todas as janelas
 clear # limpar a memória
 clc # limpa a tela da área de trabalho
-A=imread('../imagens/moon.tif'); % Ler o arquivo
-#cte_brilho=50;
+A = imread('../imagens/moon.tif'); % Ler o arquivo
+cte_brilho=50;
 f_max=max(max(A)); # novidade !!!
 f_min=min(min(A)); # novidade !!!
 figure, subplot(imshow(A), imhist(A));
-#figure, imshow(A); # mostrar a imagem
+figure, imshow(A); # mostrar a imagem
 title("Imagem Original");
-#figure, imhist(A);
+figure, imhist(A);
 title("Histograma da Imagem Original");
 [lin col]=size(A); # obtém dimensões da imagem
 for i=1:lin

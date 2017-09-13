@@ -2,7 +2,7 @@ close all % fechar todas as janelas
 clear % limpar a memória
 clc % limpa a tela da área de trabalho
 pkg load image
-A=imread('../cacau_escuro.tif'); % Ler o arquivo
+A=imread('../imagens/cacau_escuro.tif'); % Ler o arquivo
 
 maior_cinza=max(max(A));
 menor_cinza=min(min(A));
